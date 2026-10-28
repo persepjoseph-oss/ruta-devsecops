@@ -1,6 +1,6 @@
 const input  = document.getElementById("nuevaTarea");
 const boton  = document.getElementById("btnAgregar");
-const lista = document.getElementByI("lista");
+const lista = document.getElementById("lista");
 
 boton.addEventListener("click",function(){
     const texto = input.value.trim();
