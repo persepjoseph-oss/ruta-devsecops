@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de DOM y Atributos</title>
+</head>
+<body>
+
+    <!-- Elementos HTML para probar -->
+    <h1 id="titulo">¡Hola, mundo del DOM!</h1>
+    
+    <img id="foto" src="gato.jpg" alt="Imagen de un gato">
+    
+    <p class="miClase">Este es un párrafo de prueba.</p>
+
+    <!-- Script de JavaScript -->
+    <script>
+        // 1. Seleccionar por ID y mostrar en consola
+        const foto = document.querySelector('#foto'); 
+        console.log("--- Elemento foto ---");
+        console.log(foto);
+
+        // 2. Seleccionar por etiqueta <p>
+        const parrafo = document.querySelector('p');
+        console.log("--- Elemento párrafo ---");
+        console.log(parrafo);
+
+        // Obtener el atributo 'src' usando el elemento 'foto' correctamente
+        const valorSrc = foto.getAttribute('src');
+        console.log("El valor del atributo src es: " + valorSrc);
+
+        // 3. Seleccionar por clase (.miClase)
+        const clase = document.querySelector('.miClase'); 
+        console.log("--- Elemento con clase .miClase ---");
+        console.log(clase);
+
+        // 4. Forma clásica usando getElementById para el título
+        let chTitulo = document.getElementById("titulo");
+        console.log("--- Elemento título (getElementById) ---");
+        console.log(chTitulo);
+
+        // --- EXTRA: Probando setAttribute y hasAttributes ---
+        console.log("--- Probando setAttribute y hasAttributes ---");
+        
+        // Verificamos si la foto tiene atributos
+        console.log("¿La foto tiene atributos?", foto.hasAttributes()); // true
+
+        // Cambiamos el src de la foto usando setAttribute
+        foto.setAttribute('src', 'perro.jpg');
+        console.log("Nuevo src de la foto:", foto.getAttribute('src')); // "perro.jpg"
+    </script>
+
+</body>
+</html>
