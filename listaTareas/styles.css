@@ -1,0 +1,76 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #111827;
+  --border-color: #374151;
+  --border-hover: #4b5563;
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  color: var(--text-main);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 380px; /* Evita que el input se encoja demasiado en pantallas chicas */
+  height: 42px;     /* Altura óptima para interacción táctil y desktop */
+  padding: 0 14px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input:hover {
+  border-color: var(--border-hover);
+}
+
+input:focus {
+  background-color: var(--bg-input); /* Mantiene el tono oscuro uniforme */
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+button{
+    padding:  px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.con{
+    display: flex;
+    flex-direction:column;
+}
